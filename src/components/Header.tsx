@@ -56,7 +56,10 @@ export default function Header() {
           </nav>
 
           {/* CTA Button */}
-          <button className="bg-gradient-to-r from-purple-500 to-blue-500 text-white px-8 py-3 rounded-full text-lg font-semibold hover:shadow-lg hover:shadow-purple-500/25 hover:scale-105 transition-all duration-300">
+          <button 
+            onClick={() => window.open('https://app.contrackerai.skillverta.com', '_blank')}
+            className="bg-gradient-to-r from-purple-500 to-blue-500 text-white px-8 py-3 rounded-full text-lg font-semibold hover:shadow-lg hover:shadow-purple-500/25 hover:scale-105 transition-all duration-300"
+          >
             Try now
           </button>
         </div>

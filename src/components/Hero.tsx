@@ -69,7 +69,10 @@ export default function Hero() {
           transition={{ duration: 0.8, delay: 0.6 }}
           className="flex justify-center items-center"
         >
-          <button className="group relative px-12 py-5 bg-gradient-to-r from-purple-500 to-blue-500 rounded-full text-white text-lg font-semibold transition-all duration-300 hover:shadow-2xl hover:shadow-purple-500/25 hover:scale-105 glassmorphism">
+          <button 
+            onClick={() => window.open('https://app.contrackerai.skillverta.com', '_blank')}
+            className="group relative px-12 py-5 bg-gradient-to-r from-purple-500 to-blue-500 rounded-full text-white text-lg font-semibold transition-all duration-300 hover:shadow-2xl hover:shadow-purple-500/25 hover:scale-105 glassmorphism"
+          >
             <span className="flex items-center gap-3">
               Try now
               <ArrowRight className="w-6 h-6 group-hover:translate-x-1 transition-transform" />
