@@ -1,7 +1,6 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import { Github } from 'lucide-react'
 
 export default function Header() {
   const scrollToSection = (sectionId: string) => {

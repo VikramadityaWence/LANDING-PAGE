@@ -2,8 +2,19 @@
 
 import { motion } from 'framer-motion'
 import { ArrowRight } from 'lucide-react'
+import { useState, useEffect } from 'react'
 
 export default function Hero() {
+  const [isAnimating, setIsAnimating] = useState(false)
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setIsAnimating(true)
+      setTimeout(() => setIsAnimating(false), 4000) // Animation lasts 4 seconds
+    }, 15000) // Repeat every 15 seconds
+
+    return () => clearInterval(interval)
+  }, [])
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
       <div className="relative z-10 text-center px-4 max-w-6xl mx-auto">

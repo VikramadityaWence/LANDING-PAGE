@@ -1,15 +1,22 @@
 import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
+import { Poppins, Inter } from 'next/font/google'
 import '../styles/globals.css'
 
-const inter = Inter({ 
+const poppins = Poppins({
   subsets: ['latin'],
-  variable: '--font-inter'
+  weight: ['400', '500', '600', '700'],
+  variable: '--font-poppins',
+})
+
+const inter = Inter({
+  subsets: ['latin'],
+  variable: '--font-inter',
 })
 
 export const metadata: Metadata = {
   title: 'Contracker AI - Spot the Traps in Contracts & ToS',
-  description: 'AI that reads contracts for you — legal insights or plain-English red flags.',
+  description: 'AI-powered legal analysis tool that helps you identify hidden clauses and traps in contracts and terms of service.',
+  keywords: ['AI', 'legal analysis', 'contracts', 'terms of service', 'document review'],
 }
 
 export default function RootLayout({
@@ -18,16 +25,22 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en" className="dark">
-      <body className={inter.className}>
-        {/* Animated Background */}
-        <div className="animated-bg">
-          <div className="blob blob-1"></div>
-          <div className="blob blob-2"></div>
-          <div className="blob blob-3"></div>
-          <div className="blob blob-4"></div>
+    <html lang="en" className={`${poppins.variable} ${inter.variable}`}>
+      <body className={`${inter.className} antialiased`}>
+        <div className="min-h-screen bg-gradient-to-br from-gray-900 via-black to-gray-900 relative overflow-hidden">
+          {/* Animated background blobs */}
+          <div className="absolute inset-0 overflow-hidden">
+            <div className="blob blob-1"></div>
+            <div className="blob blob-2"></div>
+            <div className="blob blob-3"></div>
+            <div className="blob blob-4"></div>
+          </div>
+          
+          {/* Main content */}
+          <div className="relative z-10">
+            {children}
+          </div>
         </div>
-        {children}
       </body>
     </html>
   )
