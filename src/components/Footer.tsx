@@ -14,8 +14,12 @@ export default function Footer() {
           className="text-center"
         >
           <div className="flex items-center justify-center space-x-2 mb-6">
-            <div className="w-8 h-8 bg-gradient-to-r from-purple-500 to-blue-500 rounded-lg flex items-center justify-center">
-              <span className="text-white font-bold text-sm">❄️</span>
+            <div className="w-8 h-8 rounded-lg flex items-center justify-center">
+              <img 
+                src="/images/contracker-logo.png" 
+                alt="Contracker AI Logo" 
+                className="w-8 h-8 object-contain"
+              />
             </div>
             <span className="text-2xl font-bold text-white">Contracker AI</span>
           </div>

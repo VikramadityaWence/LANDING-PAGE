@@ -21,8 +21,12 @@ export default function Header() {
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <div className="flex items-center space-x-2">
-            <div className="w-8 h-8 bg-gradient-to-r from-purple-500 to-blue-500 rounded-lg flex items-center justify-center">
-              <span className="text-white font-bold text-sm">❄️</span>
+            <div className="w-8 h-8 rounded-lg flex items-center justify-center">
+              <img 
+                src="/images/contracker-logo.png" 
+                alt="Contracker AI Logo" 
+                className="w-8 h-8 object-contain"
+              />
             </div>
             <span className="text-xl font-bold text-white font-poppins">Contracker AI</span>
           </div>
