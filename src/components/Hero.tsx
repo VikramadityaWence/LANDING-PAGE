@@ -24,7 +24,7 @@ export default function Hero() {
           transition={{ duration: 0.8 }}
           className="inline-flex items-center px-6 py-3 rounded-full glassmorphism mb-8"
         >
-          <span className="text-sm text-gray-300">❄️ AI-Powered Legal Analysis</span>
+          <span className="text-sm text-gray-300">AI-Powered Legal Analysis</span>
         </motion.div>
 
         <motion.h1
